@@ -1,34 +1,50 @@
 [
   {
-    "company": "Hessischer Rundfunk",
-    "role": "Webentwickler Multimedia",
-    "period": "07.2019 - Heute",
+    "company": "PBS Software GmbH, Bensheim",
+    "role": "Software-Entwickler (Frontend, SAP UI5)",
+    "period": "11/2025 – heute",
     "type": "Vollzeit",
-    "description": "Frontend-Development und technische Weiterentwicklung der Webseiten des Hessischen Rundfunks. Arbeiten in agilen, interdisziplinären Teams nach Scrum/Kanban. Evaluation und Einführung neuer Frameworks, Mitentwicklung eines Designsystems, Frontend-Umsetzung von neuen Features, Neubau der Navigation, Footer, Teaser und Podcasts. Code Reviews, automatisiertes Testing, Dokumentation und Bugfixing.",
-    "skills": ["JavaScript", "React", "Storybook", "Chromatic", "Cypress", "Scrum", "Kanban", "Git"]
+    "description": "Entwicklung und Weiterentwicklung im Frontend SAP-basierter Unternehmenslösungen mit SAP UI5 (TypeScript / JavaScript, MVC-Pattern). Arbeit im internationalen, interdisziplinären Team.",
+    "skills": ["SAP UI5", "TypeScript", "JavaScript", "MVC"]
   },
   {
-    "company": "Stefan Vesper / CI-Sounds & Media",
-    "role": "Frontend/Backend-Webentwickler",
-    "period": "05.2016 - Heute",
-    "type": "Selbstständig",
-    "description": "Backend-Entwicklung mit Node.js, Anbindung an AWS S3 / AWS Lambda / Virtual Server, Frontend-Webentwicklung in JavaScript, HTML5, CSS3. Spezielle Anwendungen für den Online-Werbebereich, Sonderwerbeformen, Werbemittel-Entwicklung, Consulting und Support für Publisher, Agenturen und Vermarkter. Multimedia-Produktion im Bereich Audio und Video, Tontechnik, Filmvertonungen, Tonstudio und Sprachaufnahmen.",
-    "skills": ["Node.js", "JavaScript", "HTML5", "CSS3", "AWS S3", "AWS Lambda", "Audio/Video"]
+    "company": "Hessischer Rundfunk, Frankfurt am Main",
+    "role": "Frontend-Entwickler",
+    "period": "07/2019 – 12/2025",
+    "type": "Vollzeit",
+    "description": "Mitverantwortung für den vollständigen Relaunch des Webangebots der ARD-Anstalt Hessischer Rundfunk (Millionen-Reichweite, Nachrichten- und Mediathek-Plattform). Aufbau und Pflege eines unternehmensweiten Design Systems mit Storybook. Modernisierung des Legacy-Stacks durch AlpineJS und Tailwind CSS. Integration mit Backend-Services und Headless-CMS. Migration der Build- und Deploy-Pipeline von Jenkins auf GitLab CI/CD.",
+    "skills": ["TypeScript", "React", "Storybook", "AlpineJS", "Tailwind CSS", "GitLab CI/CD", "Scrum", "Kanban"]
   },
   {
-    "company": "Interactive Media CCSP GmbH / Deutsche Telekom Gruppe",
-    "role": "IT Webentwickler",
-    "period": "02.2009 - 04.2016",
-    "type": "Vollzeit",
-    "description": "Realisierung und Einbindung von Sonderwerbeformen, Flash Actionscript Programmierungen, Unterstützung bei der Realisierung von Werbebannern in HTML und CSS. DOM, MySQL, Video-Ads, Implementierung des VAST-Standards.",
-    "skills": ["JavaScript", "HTML", "CSS", "MySQL", "Flash", "ActionScript", "VAST"]
+    "company": "CI-Sounds & Media, Darmstadt",
+    "role": "Frontend-Entwickler (freiberuflich)",
+    "period": "04/2016 – 02/2019",
+    "type": "Freiberuflich",
+    "description": "Hauptkunde Ströer Digital Group: nahtlose Fortführung der Frontend-Tätigkeit nach der Übernahme von Interactive Media CCSP — digitale Werbe- und Video-Plattformen (HTML5, JavaScript), HTML5-Werbemittel, Online-Video-Lösungen (VAST, VPAID, IMA SDK). Weitere Kunden: Webdesign-Projekte und WordPress-Entwicklung.",
+    "skills": ["HTML5", "JavaScript", "VAST", "VPAID", "IMA SDK", "WordPress"]
   },
   {
-    "company": "4wd-media",
-    "role": "Flash-Programmierer",
-    "period": "08.2008 - 01.2009",
+    "company": "Interactive Media CCSP, Darmstadt",
+    "role": "Frontend-Entwickler",
+    "period": "02/2009 – 04/2016",
     "type": "Vollzeit",
-    "description": "Programmierung und Design mit ActionScript 2 & 3. Entwicklung von interaktiven Flash-Anwendungen und Animationen.",
-    "skills": ["ActionScript 2", "ActionScript 3", "Flash", "Design"]
+    "description": "Frontend-Entwicklung für digitale Werbe- und Video-Plattformen (HTML5, JavaScript). Aufbau von HTML5-Werbemitteln, Online-Video-Lösungen (VAST, VPAID, IMA SDK) und Multiscreen-Videoplayern. Cross-Browser- und Cross-Device-Optimierung, Performance-Tuning. 04/2016: Übernahme durch Ströer.",
+    "skills": ["HTML5", "JavaScript", "VAST", "VPAID", "IMA SDK", "CSS3"]
+  },
+  {
+    "company": "Heinrich-Emanuel-Merck-Schule, Darmstadt",
+    "role": "Fachhochschulreife — Elektrotechnik / Automatisierungstechnik",
+    "period": "1999",
+    "type": "Ausbildung",
+    "description": "Fachhochschulreife mit Schwerpunkt Elektrotechnik und Automatisierungstechnik.",
+    "skills": []
+  },
+  {
+    "company": "Deutsche Telekom AG, Darmstadt",
+    "role": "Berufsausbildung zum Kommunikations-Elektroniker",
+    "period": "1993 – 1997",
+    "type": "Ausbildung",
+    "description": "Berufsausbildung zum Kommunikations-Elektroniker im Berufsbildungszentrum der Deutschen Telekom AG.",
+    "skills": []
   }
 ]
