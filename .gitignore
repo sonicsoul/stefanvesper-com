@@ -20,5 +20,8 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# Media files (videos werden direkt auf dem Server gehostet)
+public/media/
+
 # jetbrains setting folder
 .idea/

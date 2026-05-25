@@ -4,7 +4,6 @@ const { project } = Astro.props;
 import { Image } from 'astro:assets';
 import { resolveAssetImage } from '../utils/images';
 
-// Map through the array of image strings from project JSON
 const optimizedImages = await Promise.all(
   project.images.map(async (imgName: string) => {
     return await resolveAssetImage(imgName);
@@ -12,17 +11,26 @@ const optimizedImages = await Promise.all(
 );
 
 const validImages = optimizedImages.filter(Boolean);
-
 const isSlider = validImages.length > 1;
+
+// Unique ID for this card's modal
+const modalId = `modal-${Math.random().toString(36).slice(2, 8)}`;
 ---
 
 <div class="project-card group relative bg-accent/5 border border-accent/10 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-500">
   <div class="aspect-video overflow-hidden relative bg-background/50">
     <div class="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
-    
+
     <div class={`w-full h-full relative ${isSlider ? 'image-slider' : ''}`}>
       {
-        validImages.length > 0 ? (
+        project.video ? (
+          <video
+            src={project.video}
+            controls
+            class="absolute inset-0 w-full h-full object-cover z-0"
+            preload="metadata"
+          />
+        ) : validImages.length > 0 ? (
           validImages.map((imgMetadata, index) => (
             <Image
               src={imgMetadata}
@@ -31,7 +39,6 @@ const isSlider = validImages.length > 1;
             />
           ))
         ) : (
-          /* Fallback box if array is empty or filenames are missing */
           <img
             src="/placeholder.jpeg"
             alt={`${project.title} placeholder`}
@@ -40,7 +47,7 @@ const isSlider = validImages.length > 1;
         )
       }
     </div>
-    
+
     <div class="absolute top-3 right-3 flex gap-2 z-20">
       {project.platforms.map((p: string) => (
         <div class="p-1.5 bg-background backdrop-blur-md rounded-lg border border-accent/10 text-maintext">
@@ -56,9 +63,14 @@ const isSlider = validImages.length > 1;
         <span class="text-accent text-[10px] uppercase tracking-widest font-bold">{project.category}</span>
         <h3 class="text-xl font-heading font-bold text-maintext mt-1">{project.title}</h3>
       </div>
-      <a href={project.link} target="_blank" class="text-accent/75 hover:text-accent transition-colors">
+      <!-- Pfeil öffnet Modal mit vollständiger Beschreibung -->
+      <button
+        data-modal-open={modalId}
+        class="text-accent/75 hover:text-accent transition-colors cursor-pointer"
+        aria-label="Details anzeigen"
+      >
         <Icon name="mdi:open-in-new" class="w-6 h-6" />
-      </a>
+      </button>
     </div>
 
     <p class="text-subtext text-sm font-body line-clamp-3">
@@ -67,7 +79,7 @@ const isSlider = validImages.length > 1;
 
     <div class="flex flex-wrap gap-2 pt-2">
       {project.tech.map((t: string) => (
-        <span class="rounded-md text-[10px] px-2 md:px-4 py-1 bg-accent/5 border border-accent/10 text-accent/80  group-hover:border-accent/40 group-hover:text-accent">
+        <span class="rounded-md text-[10px] px-2 md:px-4 py-1 bg-accent/5 border border-accent/10 text-accent/80 group-hover:border-accent/40 group-hover:text-accent">
           {t}
         </span>
       ))}
@@ -75,32 +87,122 @@ const isSlider = validImages.length > 1;
   </div>
 </div>
 
+<!-- Modal -->
+<div
+  id={modalId}
+  class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+>
+  <div class="relative bg-background border border-accent/20 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+    <!-- Close button -->
+    <button
+      data-modal-close={modalId}
+      class="absolute top-4 right-4 text-subtext hover:text-accent transition-colors z-10"
+      aria-label="Schließen"
+    >
+      <Icon name="mdi:close" class="w-6 h-6" />
+    </button>
+
+    <!-- Video -->
+    {project.video && (
+      <div class="aspect-video w-full bg-black rounded-t-2xl overflow-hidden">
+        <video
+          src={project.video}
+          controls
+          class="w-full h-full object-contain"
+          preload="metadata"
+        />
+      </div>
+    )}
+
+    <!-- Content -->
+    <div class="p-8 space-y-5">
+      <div>
+        <span class="text-accent text-[10px] uppercase tracking-widest font-bold">{project.category}</span>
+        <h2 class="text-2xl font-heading font-bold text-maintext mt-1">{project.title}</h2>
+      </div>
+
+      <p class="text-subtext text-sm font-body leading-relaxed">
+        {project.description}
+      </p>
+
+      <div class="flex flex-wrap gap-2 pt-2 border-t border-accent/10">
+        {project.tech.map((t: string) => (
+          <span class="rounded-md text-[10px] px-3 py-1 bg-accent/5 border border-accent/20 text-accent/80">
+            {t}
+          </span>
+        ))}
+      </div>
+
+      {project.link && project.link !== '#' && (
+        <a
+          href={project.link}
+          target="_blank"
+          class="inline-flex items-center gap-2 text-accent hover:underline text-sm"
+        >
+          <Icon name="mdi:open-in-new" class="w-4 h-4" />
+          Projekt öffnen
+        </a>
+      )}
+    </div>
+  </div>
+</div>
+
 <script>
+  function initModals() {
+    document.querySelectorAll('[data-modal-open]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-modal-open');
+        const modal = document.getElementById(id!);
+        modal?.classList.remove('hidden');
+        modal?.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    document.querySelectorAll('[data-modal-close]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-modal-close');
+        const modal = document.getElementById(id!);
+        modal?.classList.add('hidden');
+        modal?.classList.remove('flex');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Klick außerhalb schließt Modal
+    document.querySelectorAll('[id^="modal-"]').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  }
+
   function initSliders() {
     const sliders = document.querySelectorAll('.image-slider');
-    
     sliders.forEach(slider => {
       const images = slider.querySelectorAll('img');
       if (images.length <= 1) return;
-
       let currentIndex = 0;
       setInterval(() => {
-        // Hide current
         images[currentIndex].classList.remove('opacity-100', 'z-0');
         images[currentIndex].classList.add('opacity-0', 'z-[-1]');
-        
-        // Move to next
         currentIndex = (currentIndex + 1) % images.length;
-        
-        // Show next
         images[currentIndex].classList.remove('opacity-0', 'z-[-1]');
         images[currentIndex].classList.add('opacity-100', 'z-0');
       }, 3500);
     });
   }
 
+  initModals();
   initSliders();
-  document.addEventListener('astro:after-swap', initSliders);
+  document.addEventListener('astro:after-swap', () => {
+    initModals();
+    initSliders();
+  });
 </script>
 
 <style is:global>
@@ -108,8 +210,8 @@ const isSlider = validImages.length > 1;
     opacity: 0;
     visibility: hidden;
     transform: translateY(40px);
-    transition: 
-      opacity 0.8s ease-out, 
+    transition:
+      opacity 0.8s ease-out,
       transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
       visibility 0.8s;
     will-change: transform, opacity;

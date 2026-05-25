@@ -1,20 +1,12 @@
 [
   {
-    "title": "Awesome Website",
-    "description": "A high-performance, SEO-optimized web application built with modern frameworks to showcase technical expertise.",
-    "images": ["astro-01.webp", "astro-02.jpeg"],
-    "tech": ["Astro", "Tailwind"],
+    "title": "AWS S3 Upload-Tool / Redirect Generator",
+    "description": "Via Webformular können 3 Grafikdateien und eine MP4-Videodatei in einen dynamisch erstellten AWS-S3 Bucket übertragen werden. Anschließend generiert das Tool eine VPAID-Javascript-Datei, referenziert darin die S3-Datei-URLs und speichert sie im Bucket. Im nächsten Schritt generiert die Applikation eine VAST3-kompatible XML-Datei. Im letzten Schritt gibt die Anwendung eine Redirect-URL aus, die direkt im Videoadserver als Asset einer Kampagne eingebaut werden kann. Das Produkt 'Branded Player' ist ein interaktives PreRoll, das via VPAID 2 ein Grafik-Branding um den Videoplayer darstellt.",
+    "images": [],
+    "video": "/media/uploadtool_doku.mp4",
+    "tech": ["Node.js", "AWS S3", "AWS Lambda", "EJS", "XML", "VAST", "VPAID", "Heroku", "GitHub"],
     "platforms": ["web"],
-    "link": "https://astro.build/themes/details/career-portfolio-data-driven-astro-ssg/",
-    "category": "Published Website"
-  },
-  {
-    "title": "Demo Mobile App",
-    "description": "A high-performance mobile application built with modern frameworks to showcase technical expertise.",
-    "images": ["astro-02.jpeg", "#"],
-    "tech": ["Flutter", "Dart", "REST API"],
-    "platforms": ["apple-ios", "android"],
-    "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "link": "#",
+    "category": "Web Application"
   }
 ]

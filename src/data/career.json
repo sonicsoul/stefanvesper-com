@@ -1,26 +1,34 @@
 [
   {
-    "company": "Demo Company",
-    "role": "Lead Software Engineer",
-    "period": "Oct 2025 - Present",
-    "type": "Full time job",
-    "description": "Leading cross-platform mobile development using Flutter and FastAPI. Focused on scalable system design and high-performance data processing.",
-    "skills": ["Leading", "Collaboration"]
+    "company": "Hessischer Rundfunk",
+    "role": "Webentwickler Multimedia",
+    "period": "07.2019 - Heute",
+    "type": "Vollzeit",
+    "description": "Frontend-Development und technische Weiterentwicklung der Webseiten des Hessischen Rundfunks. Arbeiten in agilen, interdisziplinären Teams nach Scrum/Kanban. Evaluation und Einführung neuer Frameworks, Mitentwicklung eines Designsystems, Frontend-Umsetzung von neuen Features, Neubau der Navigation, Footer, Teaser und Podcasts. Code Reviews, automatisiertes Testing, Dokumentation und Bugfixing.",
+    "skills": ["JavaScript", "React", "Storybook", "Chromatic", "Cypress", "Scrum", "Kanban", "Git"]
   },
   {
-    "company": "Demo Company",
-    "role": "Full-stack Developer",
-    "period": "Sep 2023 - Sep 2025",
-    "type": "Full time job",
-    "description": "Specializing in Business Research Methods and Strategic HRM. Applying analytical frameworks to human capital management.",
-    "skills": ["React", "Node.js", "PostgreSQL", "Docker"]
+    "company": "Stefan Vesper / CI-Sounds & Media",
+    "role": "Frontend/Backend-Webentwickler",
+    "period": "05.2016 - Heute",
+    "type": "Selbstständig",
+    "description": "Backend-Entwicklung mit Node.js, Anbindung an AWS S3 / AWS Lambda / Virtual Server, Frontend-Webentwicklung in JavaScript, HTML5, CSS3. Spezielle Anwendungen für den Online-Werbebereich, Sonderwerbeformen, Werbemittel-Entwicklung, Consulting und Support für Publisher, Agenturen und Vermarkter. Multimedia-Produktion im Bereich Audio und Video, Tontechnik, Filmvertonungen, Tonstudio und Sprachaufnahmen.",
+    "skills": ["Node.js", "JavaScript", "HTML5", "CSS3", "AWS S3", "AWS Lambda", "Audio/Video"]
   },
   {
-    "company": "Demo University of Tech",
-    "role": "BSc in Computer Science",
-    "period": "Jun 2020 - Jun 2024",
-    "type": "Student",
-    "description": "Specializing in Business Research Methods and Strategic HRM. Applying analytical frameworks to human capital management.",
-    "skills": ["C++", "OOP", "Problem Solving"]
+    "company": "Interactive Media CCSP GmbH / Deutsche Telekom Gruppe",
+    "role": "IT Webentwickler",
+    "period": "02.2009 - 04.2016",
+    "type": "Vollzeit",
+    "description": "Realisierung und Einbindung von Sonderwerbeformen, Flash Actionscript Programmierungen, Unterstützung bei der Realisierung von Werbebannern in HTML und CSS. DOM, MySQL, Video-Ads, Implementierung des VAST-Standards.",
+    "skills": ["JavaScript", "HTML", "CSS", "MySQL", "Flash", "ActionScript", "VAST"]
+  },
+  {
+    "company": "4wd-media",
+    "role": "Flash-Programmierer",
+    "period": "08.2008 - 01.2009",
+    "type": "Vollzeit",
+    "description": "Programmierung und Design mit ActionScript 2 & 3. Entwicklung von interaktiven Flash-Anwendungen und Animationen.",
+    "skills": ["ActionScript 2", "ActionScript 3", "Flash", "Design"]
   }
 ]

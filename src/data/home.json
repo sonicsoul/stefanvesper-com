@@ -1,23 +1,35 @@
 {
-  "name": "John Doe",
+  "name": "Stefan Vesper",
   "photoUrl": "favicon.svg",
-  "intro": "A brief, compelling introduction about who you are and what you do. Mention your core philosophy, your passion for building digital products, and your drive for creating efficient, high-impact solutions.",
-  "introHtml": "A brief, compelling introduction about who you are and what you do. Mention your core <span class='text-white font-bold'>philosophy</span>, your passion for building digital products, and your drive for creating <span class='text-white font-bold'>efficient</span>, <span class='text-white font-bold'>high-impact</span> solutions.",
-  "webpageTitle": "John Doe",
-  "resumeUrl": "https://example-files.online-convert.com/document/pdf/example.pdf",
+  "intro": "Ich bin seit über 20 Jahren Web- und Frontend-Entwickler, kreativer Problemlöser und leidenschaftlicher Coder. Außerdem mache ich als Schlagzeuger und Produzent viel Musik und beschäftige mich mit synthetischer Klangerzeugung. Ich liebe Kaffee und die Natur.",
+  "introHtml": "Ich bin seit über 20 Jahren <span class='text-white font-bold'>Web- und Frontend-Entwickler</span>, kreativer Problemlöser und leidenschaftlicher Coder. Außerdem mache ich als <span class='text-white font-bold'>Schlagzeuger und Produzent</span> viel Musik und beschäftige mich mit synthetischer Klangerzeugung. Ich liebe Kaffee und die Natur.",
+  "webpageTitle": "Stefan Vesper",
+  "resumeUrl": "#",
 
   "_comment": "Add your social links below. Leave the 'url' empty to hide the icon. Set 'showInContact' to true or false to control if it appears in the Contact section.",
   "socials": [
     {
       "name": "GitHub",
-      "url": "https://github.com/[YOUR_USER_NAME]",
+      "url": "https://github.com/sonicsoul",
       "icon": "mdi:github",
       "showInContact": true
     },
     {
       "name": "LinkedIn",
-      "url": "https://linkedin.com/in/[YOUR_USER_NAME]",
+      "url": "https://linkedin.com/in/stefanvesper",
       "icon": "mdi:linkedin",
+      "showInContact": true
+    },
+    {
+      "name": "Email",
+      "url": "mailto:info@stefanvesper.com",
+      "icon": "mdi:email",
+      "showInContact": true
+    },
+    {
+      "name": "Whatsapp",
+      "url": "https://wa.me/4916090155560",
+      "icon": "mdi:whatsapp",
       "showInContact": true
     },
     {
@@ -33,18 +45,6 @@
       "showInContact": false
     },
     {
-      "name": "Email",
-      "url": "mailto:your-mail@example.com",
-      "icon": "mdi:email",
-      "showInContact": true
-    },
-    {
-      "name": "Whatsapp",
-      "url": "https://wa.me/[YOUR_WHATSAPP_NUMBER]",
-      "icon": "mdi:whatsapp",
-      "showInContact": true
-    },
-    {
       "name": "Facebook",
       "url": "#",
       "icon": "mdi:facebook",
@@ -54,7 +54,7 @@
       "name": "Messenger",
       "url": "#",
       "icon": "mdi:facebook-messenger",
-      "showInContact": true
+      "showInContact": false
     },
     {
       "name": "Instagram",
