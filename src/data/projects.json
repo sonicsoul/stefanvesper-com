@@ -16,7 +16,7 @@
     "tech": ["JavaScript", "Node.js", "JSON", "XML", "VAST", "Grunt", "ESLint", "GitHub"],
     "platforms": ["web"],
     "link": "#",
-    "category": "Web Application"
+    "category": "Adserver customising / backend"
   },
   {
     "title": "MetaTag Video-Modul – Feature 'Video-Zone'",
@@ -25,7 +25,7 @@
     "tech": ["JavaScript", "Node.js", "JSON", "XML", "VAST", "Grunt", "ESLint", "GitHub"],
     "platforms": ["web"],
     "link": "#",
-    "category": "Web Application"
+    "category": "Adserver customising / backend"
   },
   {
     "title": "MetaTag Video – VPAID-PostMessage Integration",
@@ -34,7 +34,7 @@
     "tech": ["JavaScript", "Node.js", "JSON", "XML", "VAST", "VPAID", "PostMessage", "Grunt", "ESLint", "GitHub"],
     "platforms": ["web"],
     "link": "#",
-    "category": "Web Application"
+    "category": "Adserver customising / backend"
   },
   {
     "title": "Werbeform 'Fullscreen-Homepage-Spot'",
@@ -44,7 +44,7 @@
     "tech": ["JavaScript", "VAST", "VPAID", "Google IMA SDK", "HTML5", "CSS3", "DFP", "AWS S3", "iBillboard Video Adserver"],
     "platforms": ["web"],
     "link": "#",
-    "category": "Web Application"
+    "category": "Advertisement"
   },
   {
     "title": "Werbeform 'Branded Player' für T-Online & Kicker",
@@ -53,7 +53,7 @@
     "tech": ["JavaScript", "VAST", "VPAID", "Node.js", "GitHub", "Oath Ad Platform (AOL IQ)", "iBillboard Video Adserver"],
     "platforms": ["web"],
     "link": "#",
-    "category": "Web Application"
+    "category": "Advertisement"
   },
   {
     "title": "Werbeform 'InText-Spot'",
@@ -63,6 +63,6 @@
     "tech": ["JavaScript", "VAST", "VPAID", "Google IMA SDK", "HTML5", "CSS3", "DFP", "AWS S3", "iBillboard Video Adserver"],
     "platforms": ["web"],
     "link": "#",
-    "category": "Web Application"
+    "category": "Advertisement"
   }
 ]
