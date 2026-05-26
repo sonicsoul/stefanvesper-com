@@ -8,5 +8,14 @@
     "platforms": ["web"],
     "link": "#",
     "category": "Web Application"
+  },
+  {
+    "title": "MetaTag Video-Modul Prototype",
+    "description": "MetaTag ist ein internes Node.js-Projekt zur Aussteuerung von Banner-Werbeplätzen auf Webseiten der Ströer Digital Media Group. Das MetaTag-Video-Modul wurde 2018 als externer Entwickler erstellt und wird seit Mitte 2018 auf allen Ströer-Publishern eingesetzt, u.a. Kicker.de & T-Online.de.\n\nAnsatz: Neuer Object Konstruktor \"Video\", neue Methoden via JS-Prototype. Eine spezielle Methode gibt ein JSON-formatiertes Objekt zurück, welches pro angeforderte Position einen VAST-Adtag zur weiteren Verarbeitung im Video-Player der Webseite bereitstellt. Möglichst effiziente Nutzung der vorhandenen Strukturen und API bei gleichzeitig maximaler Flexibilität für alle Beteiligten.\n\nAufgaben: Selbstständiges Einarbeiten ins GitHub-Projekt und die komplette Projektumgebung, Verstehen der Prozesse innerhalb der Anwendung, Ausmachen von Ansatzpunkten für das Video-Modul. Erstellung Modul-Konzept & Workflow, erste Tests via Localhost. Durchführung der Programmierungen, Einbindung im CMS von T-Online.de und im System von Ströer, erste Tests in der Sandbox in Zusammenarbeit mit der Ströer-IT sowie den Entwicklern des T-Online-Videoplayers (Exozet). Code-Reviews, diverse Anpassungen, Rollout Version 1.0 auf das Ströer CDN für alle angebundenen Publisher im Juni 2018. Dokumentation auf Confluence, Schulung Mitarbeiter, Erweiterungen/Updates.",
+    "images": [],
+    "tech": ["JavaScript", "Node.js", "JSON", "XML", "VAST", "Grunt", "ESLint", "GitHub"],
+    "platforms": ["web"],
+    "link": "#",
+    "category": "Web Application"
   }
 ]
