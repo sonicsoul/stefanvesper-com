@@ -1,7 +1,7 @@
 {
   "name": "Stefan Vesper",
-  "photoUrl": "favicon.svg",
-  "intro": "Senior Frontend Engineer mit 17 Jahren Berufserfahrung — von HTML5-Werbeplattformen über das Design System des Hessischen Rundfunks bis zu SAP UI5-Anwendungen für Konzernkunden. Schwerpunkte: moderne Frontend-Architekturen mit TypeScript und React, unternehmensweite Design Systems sowie CI/CD-Pipelines.",
+  "photoUrl": "steve_img_avatar_1.jpeg",
+  "intro": "Senior Frontend Engineer mit >17 Jahren Berufserfahrung — von HTML5-Werbeplattformen über das Design System des Hessischen Rundfunks bis zu SAP UI5-Anwendungen für Konzernkunden. Schwerpunkte: moderne Frontend-Architekturen mit TypeScript und React, unternehmensweite Design Systems sowie CI/CD-Pipelines.",
   "introHtml": "<span class='text-white font-bold'>Senior Frontend Engineer</span> mit 17 Jahren Berufserfahrung — von HTML5-Werbeplattformen über das Design System des Hessischen Rundfunks bis zu <span class='text-white font-bold'>SAP UI5-Anwendungen</span> für Konzernkunden. Schwerpunkte: moderne Frontend-Architekturen mit <span class='text-white font-bold'>TypeScript und React</span>, unternehmensweite Design Systems sowie CI/CD-Pipelines.",
   "webpageTitle": "Stefan Vesper",
   "resumeUrl": "#",
