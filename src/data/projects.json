@@ -45,5 +45,24 @@
     "platforms": ["web"],
     "link": "#",
     "category": "Web Application"
+  },
+  {
+    "title": "Werbeform 'Branded Player' für T-Online & Kicker",
+    "description": "Erstellung eines VPAID2-Werbemittels, das zu einem Werbevideo passende Grafikelemente um den Videoplayer herum anzeigt. Werbetreibenden wird hier ohne zusätzlichen Agenturaufwand ermöglicht, eine Videobuchung mit mehr Aufmerksamkeit und Interaktivität auszustatten. Reichweite, Click- und Durchsehraten werden gesteigert.\n\nBackground: Ursprünglich wurde diese Werbeform bereits 2015/16 entwickelt und nutzte den Companion-Banner-Knoten des VAST-Protokolls für die Auslieferung des Codes. Zunächst wurde das Javascript für die Werbeform programmiert, anschließend im Adserver ein Buchungs-Template erstellt, das das Javascript zusammen mit hochzuladenen Grafiken nutzt und alles mit einer Videobuchung verknüpft.\n\nDurch das Wegfallen der Companion-Banner bei den meisten Publishern wurde später die beschriebene Lösung mit VPAID2 entwickelt. Parallel dazu entstand die 'PostMessage'-Erweiterung des Ströer-Video-Moduls, die u.a. für dieses Werbemittel benötigt wird. Es ist geplant, das Werbemittel auf den neuen VAST 4.1 Standard hin weiter zu entwickeln.\n\nDieses Projekt steht in Verbindung mit 'MetaTag Video – VPAID-PostMessage Integration' und 'AWS S3 Upload-Tool / Redirect Generator'.",
+    "images": ["brandedPlayer.png"],
+    "tech": ["JavaScript", "VAST", "VPAID", "Node.js", "GitHub", "Oath Ad Platform (AOL IQ)", "iBillboard Video Adserver"],
+    "platforms": ["web"],
+    "link": "#",
+    "category": "Web Application"
+  },
+  {
+    "title": "Werbeform 'InText-Spot'",
+    "description": "Das Werbemittel blendet sich erst ein, sobald der User innerhalb des Textes nach unten scrollt. Zudem läuft der Spot nur bei einer Sichtbarkeit von mind. 50% ab. Optimal für die Verlängerung von PreRoll-Kampagnen geeignet.\n\nAufgaben: VAST/VPAID-kompatibler Videoplayer via JavaScript / Google IMA SDK HTML5. Programmierung in JS/CSS: Animation und Scrollverhalten (Öffnen bei 50% Sichtbarkeit, Anhalten wenn außerhalb View, Schließen nach Ablauf). Erstellen der Kreativ-Vorlagen in DFP, Ablage der Assets auf AWS S3, Integration auf einer Vielzahl von Publishern.\n\nVarianten: Desktop, Mobile (iOS & Android), 16/9 und 9/16 Auslieferung, RTA-Variante für Realtime Bidding Websites.",
+    "images": [],
+    "video": "/media/InText-Spot_display_Kicker.mp4",
+    "tech": ["JavaScript", "VAST", "VPAID", "Google IMA SDK", "HTML5", "CSS3", "DFP", "AWS S3", "iBillboard Video Adserver"],
+    "platforms": ["web"],
+    "link": "#",
+    "category": "Web Application"
   }
 ]
