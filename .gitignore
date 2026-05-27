@@ -25,3 +25,7 @@ public/media/
 
 # jetbrains setting folder
 .idea/
+
+# drums-app: keep source, ignore deps and local build artifacts
+drums-app/node_modules/
+drums-app/dist/

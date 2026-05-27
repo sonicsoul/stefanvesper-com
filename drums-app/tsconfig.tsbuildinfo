@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/audio/engine.ts","./src/audio/presets.ts","./src/audio/voices.ts","./src/components/presetbar.tsx","./src/components/sequencer.tsx","./src/components/transport.tsx","./src/hooks/usesequencer.ts","./src/utils/pattern.ts"],"version":"5.9.3"}
