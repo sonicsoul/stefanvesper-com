@@ -1,5 +1,14 @@
 [
   {
+    "title": "4-Track / 16-Step Drum Sequencer",
+    "description": "Ein Vier-Spur-Drumcomputer im Browser — kleines Arbeitsprojekt aus Spaß, to be continued.\n\n3 der 4 Sounds sind live synthetisiert mit der Web Audio API (Kick, Hi-Hat, Tom), die Snare ist ein kurzes WAV-Sample. Die erstellten Patterns sind bei Reload persistent und lassen sich via URL-Hash teilen — der Link spielt dann direkt das gespeicherte Pattern ab.\n\nTo do: More sounds & samples · Sound-Visualisierung · Export als MIDI-File · Sync via Ableton Link",
+    "images": ["drumseq.webp"],
+    "tech": ["React", "TypeScript", "Web Audio API", "WAV", "URL Hash API", "HTML5", "CSS3"],
+    "platforms": ["web"],
+    "link": "https://www.stefanvesper.com/drums/",
+    "category": "Web Application"
+  },
+  {
     "title": "AWS S3 Upload-Tool / Redirect Generator",
     "description": "Via Webformular können 3 Grafikdateien und eine MP4-Videodatei in einen dynamisch erstellten AWS-S3 Bucket übertragen werden. Anschließend generiert das Tool eine VPAID-Javascript-Datei, referenziert darin die S3-Datei-URLs und speichert sie im Bucket. Im nächsten Schritt generiert die Applikation eine VAST3-kompatible XML-Datei. Im letzten Schritt gibt die Anwendung eine Redirect-URL aus, die direkt im Videoadserver als Asset einer Kampagne eingebaut werden kann. Das Produkt 'Branded Player' ist ein interaktives PreRoll, das via VPAID 2 ein Grafik-Branding um den Videoplayer darstellt.",
     "images": ["code2.jpg"],
