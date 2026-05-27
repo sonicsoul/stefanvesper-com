@@ -38,7 +38,7 @@ export default function App() {
     <div className="app">
       <header className="header">
         <div className="header__brand">
-          <div className="header__name">STEP-808</div>
+          <div className="header__name">DR.STEPPER</div>
           <div className="header__sub">Drum Sequencer</div>
         </div>
         <div className="header__meta">
