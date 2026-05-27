@@ -13,7 +13,7 @@ function fromGrid(grid: string[]): Pattern {
 
 export const PRESETS: Preset[] = [
   {
-    name: "Boom Bap",
+    name: "Boom Tschack",
     bpm: 92,
     pattern: fromGrid([
       "1000000010000000", // kick
@@ -23,7 +23,7 @@ export const PRESETS: Preset[] = [
     ]),
   },
   {
-    name: "Four-on-Floor",
+    name: "4-on-the-Floor",
     bpm: 124,
     pattern: fromGrid([
       "1000100010001000", // kick
@@ -33,7 +33,7 @@ export const PRESETS: Preset[] = [
     ]),
   },
   {
-    name: "ISC-Style",
+    name: "Full-on",
     bpm: 138,
     pattern: fromGrid([
       "1010101010101010", // kick — driving EBM 8ths
