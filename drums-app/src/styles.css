@@ -1,30 +1,29 @@
 /* =============================================================
    STEP-808 — visual identity
-   Palette inspired by the Roland TR-808 / TR-909 faceplate:
-   warm dark browns, classic orange (#F47C20), and accents in
-   the family of cream-yellow and rust-red.
+   Palette aligned with stefanvesper.com "strategic-dark" theme:
+   dark navy/slate background, teal accent (#508883).
    ============================================================= */
 
 :root {
-  --bg-deep: #dddddd;
-  --bg-panel: #1a1410;
-  --bg-panel-2: #221a13;
-  --bg-step: #2b1f15;
-  --bg-step-hover: #382819;
-  --bg-step-active: #f47c20;
-  --bg-step-active-hi: #ffa24d;
-  --bg-step-playing: #e73e2a;
-  --bg-step-playing-hi: #ff6a4d;
-  --border-warm: #3a2c1f;
-  --border-warm-strong: #4a382a;
-  --text-main: #f0e6d2;
-  --text-dim: #b6a484;
-  --text-faint: #7a6a52;
-  --accent-yellow: #e5c28a;
-  --accent-orange: #f47c20;
-  --accent-orange-glow: rgba(244, 124, 32, 0.32);
-  --accent-red: #e73e2a;
-  --led-green: #5ae07a;
+  --bg-deep: #0F172A;
+  --bg-panel: #172033;
+  --bg-panel-2: #111827;
+  --bg-step: #1e2a3a;
+  --bg-step-hover: #263548;
+  --bg-step-active: #508883;
+  --bg-step-active-hi: #6aada8;
+  --bg-step-playing: #3a6b67;
+  --bg-step-playing-hi: #4d8f8a;
+  --border-subtle: #1e2d40;
+  --border-strong: #2d4156;
+  --text-main: #F1F5F9;
+  --text-dim: #a0adbf;
+  --text-faint: #4d5b6f;
+  --accent-light: #7dbfba;
+  --accent: #508883;
+  --accent-glow: rgba(80, 136, 131, 0.3);
+  --accent-deep: #3a6b67;
+  --led-on: #508883;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono",
     Menlo, Consolas, monospace;
   --font-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial,
@@ -39,13 +38,13 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(
-      ellipse at top,
-      #1a130b 0%,
-      var(--bg-deep) 60%,
-      #050302 100%
-    ),
-    var(--bg-deep);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, #0F172A, black 16%) 0%,
+    #0F172A 50%,
+    color-mix(in srgb, #0F172A, white 8%) 100%
+  );
+  background-attachment: fixed;
   color: var(--text-main);
   font-family: var(--font-sans);
   min-height: 100vh;
@@ -87,8 +86,8 @@ body {
   font-weight: 700;
   letter-spacing: 0.18em;
   font-size: 28px;
-  color: var(--accent-orange);
-  text-shadow: 0 0 18px var(--accent-orange-glow);
+  color: var(--accent);
+  text-shadow: 0 0 22px var(--accent-glow);
 }
 
 .header__sub {
@@ -114,27 +113,27 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #2d3a26;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
+  background: #2a2860;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
 .led--on {
-  background: var(--led-green);
-  box-shadow: 0 0 8px rgba(90, 224, 122, 0.7),
-    inset 0 0 0 1px rgba(0, 0, 0, 0.45);
+  background: var(--led-on);
+  box-shadow: 0 0 10px var(--accent-glow),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 /* ---------- panel ---------- */
 
 .panel {
   background: linear-gradient(180deg, var(--bg-panel-2), var(--bg-panel));
-  border: 1px solid var(--border-warm);
+  border: 1px solid var(--border-subtle);
   border-radius: 14px;
   padding: 22px 22px 20px;
   box-shadow:
-    inset 0 1px 0 rgba(255, 200, 140, 0.04),
-    inset 0 0 0 1px rgba(0, 0, 0, 0.3),
-    0 20px 60px rgba(0, 0, 0, 0.45);
+    inset 0 1px 0 rgba(167, 139, 250, 0.06),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+    0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 /* ---------- grid ---------- */
@@ -168,8 +167,8 @@ body {
 }
 
 .voiceLabel:hover {
-  background: rgba(244, 124, 32, 0.06);
-  border-color: var(--border-warm);
+  background: rgba(167, 139, 250, 0.07);
+  border-color: var(--border-subtle);
 }
 
 .voiceLabel__name {
@@ -177,7 +176,7 @@ body {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.18em;
-  color: var(--accent-yellow);
+  color: var(--accent-light);
 }
 
 .voiceLabel__hint {
@@ -189,7 +188,6 @@ body {
 
 .steps {
   display: grid;
-  /* 16 steps in 4 groups of 4. We use 4 inner gaps + 3 wider group gaps via gap */
   grid-template-columns: repeat(16, 1fr);
   gap: 6px;
 }
@@ -201,8 +199,8 @@ body {
 
 .step {
   appearance: none;
-  border: 1px solid var(--border-warm);
-  background: linear-gradient(180deg, var(--bg-step) 0%, #1c1309 100%);
+  border: 1px solid var(--border-subtle);
+  background: linear-gradient(180deg, #232160 0%, var(--bg-step) 100%);
   border-radius: 6px;
   height: 38px;
   cursor: pointer;
@@ -215,11 +213,11 @@ body {
 }
 
 .step:hover {
-  background: linear-gradient(180deg, var(--bg-step-hover), #2a1d12);
+  background: linear-gradient(180deg, var(--bg-step-hover), #201e55);
 }
 
 .step--beatStart {
-  border-color: var(--border-warm-strong);
+  border-color: var(--border-strong);
 }
 
 .step--active {
@@ -228,10 +226,10 @@ body {
     var(--bg-step-active-hi),
     var(--bg-step-active)
   );
-  border-color: #b35817;
+  border-color: #7c5fc8;
   box-shadow:
-    0 0 12px var(--accent-orange-glow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    0 0 12px var(--accent-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .step--playing {
@@ -240,10 +238,10 @@ body {
     var(--bg-step-playing-hi),
     var(--bg-step-playing)
   );
-  border-color: #b22a1c;
+  border-color: #5b25b8;
   box-shadow:
-    0 0 18px rgba(231, 62, 42, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    0 0 18px rgba(124, 58, 237, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
   transform: translateY(-1px);
 }
 
@@ -259,7 +257,7 @@ body {
   flex-direction: column;
   gap: 14px;
   padding-top: 18px;
-  border-top: 1px solid var(--border-warm);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .transport {
@@ -271,8 +269,8 @@ body {
 
 .btn {
   appearance: none;
-  border: 1px solid var(--border-warm-strong);
-  background: linear-gradient(180deg, #2a1f15, #1a1209);
+  border: 1px solid var(--border-strong);
+  background: linear-gradient(180deg, #252360, #1a1840);
   color: var(--text-main);
   font-family: var(--font-mono);
   letter-spacing: 0.14em;
@@ -286,7 +284,7 @@ body {
 }
 
 .btn:hover {
-  background: linear-gradient(180deg, #382819, #251a10);
+  background: linear-gradient(180deg, #2e2c70, #222060);
 }
 
 .btn:active {
@@ -299,14 +297,14 @@ body {
   gap: 10px;
   padding: 12px 22px;
   font-size: 13px;
-  border-color: #b35817;
-  background: linear-gradient(180deg, #f99348, var(--accent-orange));
-  color: #1c1004;
-  box-shadow: 0 0 18px var(--accent-orange-glow);
+  border-color: #3a6b67;
+  background: linear-gradient(180deg, var(--bg-step-active-hi), var(--accent));
+  color: #0F172A;
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
 .btn--play:hover {
-  background: linear-gradient(180deg, #ffa55f, #f88a36);
+  background: linear-gradient(180deg, #82ccc7, #5ea09b);
 }
 
 .btn--play__icon {
@@ -315,36 +313,36 @@ body {
 }
 
 .btn--playing {
-  background: linear-gradient(180deg, #ec5a48, var(--accent-red));
-  border-color: #b22a1c;
-  color: #1c0a06;
-  box-shadow: 0 0 22px rgba(231, 62, 42, 0.55);
+  background: linear-gradient(180deg, var(--bg-step-playing-hi), var(--accent-deep));
+  border-color: #2a4f4c;
+  color: #d4f0ee;
+  box-shadow: 0 0 22px rgba(80, 136, 131, 0.45);
 }
 
 .btn--playing:hover {
-  background: linear-gradient(180deg, #f06d5c, #df3522);
+  background: linear-gradient(180deg, #5aa09b, #326460);
 }
 
 .btn--ghost {
   background: transparent;
-  border-color: var(--border-warm);
+  border-color: var(--border-subtle);
   color: var(--text-dim);
 }
 
 .btn--ghost:hover {
-  background: rgba(244, 124, 32, 0.06);
+  background: rgba(167, 139, 250, 0.07);
   color: var(--text-main);
 }
 
 .btn--preset {
   background: transparent;
-  border-color: var(--border-warm);
-  color: var(--accent-yellow);
+  border-color: var(--border-subtle);
+  color: var(--accent-light);
 }
 
 .btn--preset:hover {
-  background: rgba(229, 194, 138, 0.08);
-  border-color: var(--border-warm-strong);
+  background: rgba(167, 139, 250, 0.08);
+  border-color: var(--border-strong);
 }
 
 .bpm {
@@ -352,8 +350,8 @@ body {
   align-items: center;
   gap: 10px;
   padding: 6px 14px;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid var(--border-warm);
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-subtle);
   border-radius: 8px;
 }
 
@@ -370,8 +368,8 @@ body {
   height: 4px;
   background: linear-gradient(
     90deg,
-    var(--accent-orange) 0%,
-    var(--accent-orange) var(--fill, 50%),
+    var(--accent) 0%,
+    var(--accent) var(--fill, 50%),
     var(--bg-step) var(--fill, 50%),
     var(--bg-step) 100%
   );
@@ -383,9 +381,9 @@ body {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--accent-yellow);
-  border: 1px solid #6e553a;
-  box-shadow: 0 0 6px rgba(229, 194, 138, 0.4);
+  background: var(--accent-light);
+  border: 1px solid #7c5fc8;
+  box-shadow: 0 0 6px var(--accent-glow);
   cursor: pointer;
 }
 
@@ -393,8 +391,8 @@ body {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--accent-yellow);
-  border: 1px solid #6e553a;
+  background: var(--accent-light);
+  border: 1px solid #7c5fc8;
   cursor: pointer;
 }
 
@@ -402,10 +400,10 @@ body {
   font-family: var(--font-mono);
   font-size: 16px;
   font-weight: 700;
-  color: var(--accent-orange);
+  color: var(--accent);
   min-width: 36px;
   text-align: right;
-  text-shadow: 0 0 8px var(--accent-orange-glow);
+  text-shadow: 0 0 8px var(--accent-glow);
 }
 
 .transport__actions {
