@@ -1,7 +1,7 @@
 [
   {
     "title": "4-Track / 16-Step Drum Sequencer",
-    "description": "Ein Vier-Spur-Drumcomputer im Browser — kleines Arbeitsprojekt aus Spaß, to be continued.\n\n3 der 4 Sounds sind live synthetisiert mit der Web Audio API (Kick, Hi-Hat, Tom), die Snare ist ein kurzes WAV-Sample. Die erstellten Patterns sind bei Reload persistent und lassen sich via URL-Hash teilen — der Link spielt dann direkt das gespeicherte Pattern ab.\n\n## To Do\n- More sounds & samples\n- Sound-Visualisierung\n- Export als MIDI-File\n- Sync via Ableton Link",
+    "description": "Ein Vier-Spur-Drumcomputer im Browser — kleines Arbeitsprojekt aus Spaß, to be continued.\n\n3 der 4 Sounds sind live synthetisiert mit der Web Audio API (Kick, Hi-Hat, Tom), die Snare ist ein kurzes WAV-Sample. Die erstellten Patterns sind bei Reload persistent und lassen sich via URL-Hash teilen — der Link spielt dann direkt das gespeicherte Pattern ab.\n\n## To Do\n- More sounds & samples\n- Custom Sample Upload\n- Sound-Visualisierung\n-Sample Edit\n- Export MIDI-File\n- Export Audio-File\n- Sync via Ableton Link",
     "images": [
       "drumseq2.webp"
     ],
