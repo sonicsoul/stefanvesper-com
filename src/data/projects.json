@@ -1,76 +1,181 @@
 [
   {
     "title": "4-Track / 16-Step Drum Sequencer",
-    "description": "Ein Vier-Spur-Drumcomputer im Browser — kleines Arbeitsprojekt aus Spaß, to be continued.\n\n3 der 4 Sounds sind live synthetisiert mit der Web Audio API (Kick, Hi-Hat, Clap), die Snare ist ein kurzes WAV-Sample. Die erstellten Patterns sind bei Reload persistent und lassen sich via URL-Hash teilen — der Link spielt dann direkt das gespeicherte Pattern ab.\n\nTo do: More sounds & samples · Sound-Visualisierung · Export MIDI-File · Export Audio File · Custom Sample Upload · Sample crop/edit · Sync via Ableton Link",
-    "images": ["drumseq2.webp"],
-    "tech": ["React", "TypeScript", "Web Audio API", "WAV", "URL Hash API", "HTML5", "CSS3"],
-    "platforms": ["web"],
+    "description": "Ein Vier-Spur-Drumcomputer im Browser — kleines Arbeitsprojekt aus Spaß, to be continued.\n\n3 der 4 Sounds sind live synthetisiert mit der Web Audio API (Kick, Hi-Hat, Tom), die Snare ist ein kurzes WAV-Sample. Die erstellten Patterns sind bei Reload persistent und lassen sich via URL-Hash teilen — der Link spielt dann direkt das gespeicherte Pattern ab.\n\n## To Do\n- More sounds & samples\n- Sound-Visualisierung\n- Export als MIDI-File\n- Sync via Ableton Link",
+    "images": [
+      "drumseq2.webp"
+    ],
+    "tech": [
+      "React",
+      "TypeScript",
+      "Web Audio API",
+      "WAV",
+      "URL Hash API",
+      "HTML5",
+      "CSS3"
+    ],
+    "platforms": [
+      "web"
+    ],
     "link": "https://www.stefanvesper.com/drums/",
     "category": "Web Application"
   },
   {
     "title": "AWS S3 Upload-Tool / Redirect Generator",
-    "description": "Via Webformular können 3 Grafikdateien und eine MP4-Videodatei in einen dynamisch erstellten AWS-S3 Bucket übertragen werden. Anschließend generiert das Tool eine VPAID-Javascript-Datei, referenziert darin die S3-Datei-URLs und speichert sie im Bucket. Im nächsten Schritt generiert die Applikation eine VAST3-kompatible XML-Datei. Im letzten Schritt gibt die Anwendung eine Redirect-URL aus, die direkt im Videoadserver als Asset einer Kampagne eingebaut werden kann. Das Produkt 'Branded Player' ist ein interaktives PreRoll, das via VPAID 2 ein Grafik-Branding um den Videoplayer darstellt.",
-    "images": ["code2.jpg"],
+    "description": "Via Webformular können 3 Grafikdateien und eine MP4-Videodatei in einen dynamisch erstellten AWS-S3 Bucket übertragen werden.\n\n## Ablauf\n- Upload der Assets via Webformular\n- Generierung einer VPAID-Javascript-Datei mit den S3-Datei-URLs\n- Erstellung einer VAST3-kompatiblen XML-Datei\n- Ausgabe einer Redirect-URL für den direkten Einsatz im Videoadserver\n\n## Hintergrund\nDas Produkt 'Branded Player' ist ein interaktives PreRoll, das via VPAID 2 ein Grafik-Branding um den Videoplayer darstellt.",
+    "images": [
+      "code2.jpg"
+    ],
     "video": "/media/uploadtool_doku.mp4",
-    "tech": ["Node.js", "AWS S3", "AWS Lambda", "EJS", "XML", "VAST", "VPAID", "Heroku", "GitHub"],
-    "platforms": ["web"],
+    "tech": [
+      "Node.js",
+      "AWS S3",
+      "AWS Lambda",
+      "EJS",
+      "XML",
+      "VAST",
+      "VPAID",
+      "Heroku",
+      "GitHub"
+    ],
+    "platforms": [
+      "web"
+    ],
     "link": "#",
     "category": "Web Application"
   },
   {
     "title": "MetaTag Video-Modul Prototype",
-    "description": "MetaTag ist ein Node.js-Projekt der Ströer Digital Group zur Aussteuerung von Banner-Werbeplätzen auf Webseiten der Ströer Digital Media Group. Das MetaTag-Video-Modul wurde 2018 als externer Entwickler erstellt und wird seit Mitte 2018 auf allen Ströer-Publishern eingesetzt, u.a. Kicker.de & T-Online.de.\n\nAnsatz: Neuer Object Konstruktor \"Video\", neue Methoden via JS-Prototype. Eine spezielle Methode gibt ein JSON-formatiertes Objekt zurück, welches pro angeforderte Position einen VAST-Adtag zur weiteren Verarbeitung im Video-Player der Webseite bereitstellt. Möglichst effiziente Nutzung der vorhandenen Strukturen und API bei gleichzeitig maximaler Flexibilität für alle Beteiligten.\n\nAufgaben: Selbstständiges Einarbeiten ins GitHub-Projekt und die komplette Projektumgebung, Verstehen der Prozesse innerhalb der Anwendung, Ausmachen von Ansatzpunkten für das Video-Modul. Erstellung Modul-Konzept & Workflow, erste Tests via Localhost. Durchführung der Programmierungen, Einbindung im CMS von T-Online.de und im System von Ströer, erste Tests in der Sandbox in Zusammenarbeit mit der Ströer-IT sowie den Entwicklern des T-Online-Videoplayers (Exozet). Code-Reviews, diverse Anpassungen, Rollout Version 1.0 auf das Ströer CDN für alle angebundenen Publisher im Juni 2018. Dokumentation auf Confluence, Schulung Mitarbeiter, Erweiterungen/Updates.",
-    "images": ["code1.jpg"],
-    "tech": ["JavaScript", "Node.js", "JSON", "XML", "VAST", "Grunt", "ESLint", "GitHub"],
-    "platforms": ["web"],
+    "description": "MetaTag ist ein Node.js-Projekt der Ströer Digital Group zur Aussteuerung von Banner-Werbeplätzen. Das MetaTag-Video-Modul wurde 2018 als externer Entwickler erstellt und wird seit Mitte 2018 auf allen Ströer-Publishern eingesetzt, u.a. Kicker.de & T-Online.de.\n\n## Ansatz\nNeuer Object-Konstruktor 'Video', neue Methoden via JS-Prototype. Eine Methode gibt ein JSON-formatiertes Objekt zurück, das pro angeforderter Position einen VAST-Adtag für den Videoplayer bereitstellt. Möglichst effiziente Nutzung der vorhandenen Strukturen bei maximaler Flexibilität.\n\n## Aufgaben\n- Einarbeitung ins GitHub-Projekt und Projektumgebung\n- Erstellung Modul-Konzept & Workflow\n- Programmierung, Einbindung im CMS von T-Online.de und Ströer\n- Tests in der Sandbox mit Ströer-IT und Entwicklern des T-Online-Videoplayers (Exozet)\n- Rollout Version 1.0 auf das Ströer CDN (Juni 2018)\n- Dokumentation auf Confluence, Schulung Mitarbeiter, Erweiterungen/Updates",
+    "images": [
+      "code1.jpg"
+    ],
+    "tech": [
+      "JavaScript",
+      "Node.js",
+      "JSON",
+      "XML",
+      "VAST",
+      "Grunt",
+      "ESLint",
+      "GitHub"
+    ],
+    "platforms": [
+      "web"
+    ],
     "link": "#",
     "category": "Adserver customising / backend"
   },
   {
     "title": "MetaTag Video-Modul – Feature 'Video-Zone'",
-    "description": "Erweiterung der Funktionalität des MetaTag-Video-Moduls der Ströer Digital Group. Auf Kundenwunsch wurde der Haupt-Methode ein neuer optionaler Parameter hinzugefügt, der eine dediziertere Auswahl der Video-Rubrik durch den Publisher ermöglicht.\n\nDas Update wurde genutzt, um weitere Verbesserungen am Modul vorzunehmen: u.a. wurde der Prozess zur Erstellung von VAST-Tags generischer programmiert, um mehr Kompatibilität für weitere Publisher herzustellen und den Wartungsaufwand zu minimieren.\n\nDas Modul ist skalierbar gestaltet, integriert sich nahtlos in vorhandene Strukturen und trennt den Inhalt vom Code. Weitere Publisher können ohne großen Aufwand integriert werden und dieses Feature ebenfalls nutzen.\n\nKunde: Ströer Digital Media",
-    "images": ["code3.jpg"],
-    "tech": ["JavaScript", "Node.js", "JSON", "XML", "VAST", "Grunt", "ESLint", "GitHub"],
-    "platforms": ["web"],
+    "description": "Erweiterung der Funktionalität des MetaTag-Video-Moduls der Ströer Digital Group.\n\n## Feature\nAuf Kundenwunsch wurde der Haupt-Methode ein neuer optionaler Parameter hinzugefügt, der eine dediziertere Auswahl der Video-Rubrik durch den Publisher ermöglicht.\n\n## Verbesserungen\n- Erstellung von VAST-Tags generischer programmiert für mehr Publisher-Kompatibilität\n- Minimierung des Wartungsaufwands\n- Skalierbar gestaltet, nahtlose Integration in vorhandene Strukturen\n- Weitere Publisher können ohne großen Aufwand integriert werden\n\nKunde: Ströer Digital Media",
+    "images": [
+      "code3.jpg"
+    ],
+    "tech": [
+      "JavaScript",
+      "Node.js",
+      "JSON",
+      "XML",
+      "VAST",
+      "Grunt",
+      "ESLint",
+      "GitHub"
+    ],
+    "platforms": [
+      "web"
+    ],
     "link": "#",
     "category": "Adserver customising / backend"
   },
   {
     "title": "MetaTag Video – VPAID-PostMessage Integration",
-    "description": "Erweiterung des MetaTag-Video-Moduls: Es kann nun PostMessage-Befehle von einem interaktiven VPAID-PreRoll empfangen und verarbeiten. Dies ermöglicht eine sichere, bidirektionale Kommunikation zwischen den Kunden-Webseiten und einem VPAID-Werbemittel. Weiterhin bietet es eine Template-Funktion, um auf Kommando zusätzliche Inhalte auf einer Kunden-Webseite darzustellen, getriggert durch das VPAID-Werbemittel.\n\nIm Bereich der Videowerbung ermöglicht die VPAID-Technologie u.a. User-Interaktivität und das Nachladen von beliebigen Inhalten innerhalb eines Video-Werbemittels. Ein für SDG 2017 erstelltes Produkt 'Branded Player' nutzt diese Technologie und benötigt dabei Kommunikation mit der Webseite. Als sicherste und skalierbarste Lösung bot sich JavaScript-PostMessage an.\n\nDieses Feature steht in Verbindung mit den Projekten 'MetaTag Video-Modul Prototype' und 'AWS S3 Upload-Tool / Redirect Generator'.",
-    "images": ["code2.jpg"],
-    "tech": ["JavaScript", "Node.js", "JSON", "XML", "VAST", "VPAID", "PostMessage", "Grunt", "ESLint", "GitHub"],
-    "platforms": ["web"],
+    "description": "Erweiterung des MetaTag-Video-Moduls: Empfang und Verarbeitung von PostMessage-Befehlen eines interaktiven VPAID-PreRolls.\n\n## Features\n- Sichere, bidirektionale Kommunikation zwischen Kunden-Webseiten und VPAID-Werbemittel\n- Template-Funktion für zusätzliche Inhalte auf der Webseite, getriggert durch das VPAID-Werbemittel\n\n## Hintergrund\nDas 'Branded Player'-Produkt (SDG 2017) nutzt VPAID-Technologie für User-Interaktivität und benötigt Kommunikation mit der Webseite. Als sicherste und skalierbarste Lösung wurde JavaScript-PostMessage gewählt.\n\nSteht in Verbindung mit 'MetaTag Video-Modul Prototype' und 'AWS S3 Upload-Tool / Redirect Generator'.",
+    "images": [
+      "code2.jpg"
+    ],
+    "tech": [
+      "JavaScript",
+      "Node.js",
+      "JSON",
+      "XML",
+      "VAST",
+      "VPAID",
+      "PostMessage",
+      "Grunt",
+      "ESLint",
+      "GitHub"
+    ],
+    "platforms": [
+      "web"
+    ],
     "link": "#",
     "category": "Adserver customising / backend"
   },
   {
     "title": "Werbeform 'Fullscreen-Homepage-Spot'",
-    "description": "Sonderwerbeform für die Startseiten von Kicker.de & T-Online.de. Das Werbemittel blendet im Hintergrund der Webseite ein Fullscreen-Video ein und 'öffnet' eine Lücke in der Webseite, durch die das Fullscreen-Video zu sehen ist. Nach Ablauf des Videos wird die Lücke animiert geschlossen und ein Reminder eingeblendet. Der Videoplayer ist vollständig VAST/VPAID-kompatibel.\n\nAufgaben: VAST/VPAID-kompatibler Videoplayer via JavaScript / Google IMA SDK HTML5. Aufbau via JS/CSS, Integration in den Buchungsprozess von Ströer. Erstellen der Kreativ-Vorlagen in DFP und Ablage der Assets auf AWS S3. Integration auf den Startseiten von Kicker.de, T-Online.de, Spox.de und weiteren.",
-    "images": ["code1.jpg"],
+    "description": "Sonderwerbeform für die Startseiten von Kicker.de & T-Online.de. Das Werbemittel blendet im Hintergrund ein Fullscreen-Video ein und öffnet eine Lücke in der Webseite, durch die das Video sichtbar ist. Nach Ablauf wird die Lücke animiert geschlossen und ein Reminder eingeblendet. Der Videoplayer ist vollständig VAST/VPAID-kompatibel.\n\n## Aufgaben\n- VAST/VPAID-kompatibler Videoplayer via JavaScript / Google IMA SDK HTML5\n- Aufbau via JS/CSS, Integration in den Buchungsprozess von Ströer\n- Erstellen der Kreativ-Vorlagen in DFP, Ablage der Assets auf AWS S3\n- Integration auf den Startseiten von Kicker.de, T-Online.de, Spox.de und weiteren",
+    "images": [
+      "code1.jpg"
+    ],
     "video": "/media/FSHPSpot_demo.mp4",
-    "tech": ["JavaScript", "VAST", "VPAID", "Google IMA SDK", "HTML5", "CSS3", "DFP", "AWS S3", "iBillboard Video Adserver"],
-    "platforms": ["web"],
+    "tech": [
+      "JavaScript",
+      "VAST",
+      "VPAID",
+      "Google IMA SDK",
+      "HTML5",
+      "CSS3",
+      "DFP",
+      "AWS S3",
+      "iBillboard Video Adserver"
+    ],
+    "platforms": [
+      "web"
+    ],
     "link": "#",
     "category": "Advertisement"
   },
   {
     "title": "Werbeform 'Branded Player' für T-Online & Kicker",
-    "description": "Erstellung eines VPAID2-Werbemittels, das zu einem Werbevideo passende Grafikelemente um den Videoplayer herum anzeigt. Werbetreibenden wird hier ohne zusätzlichen Agenturaufwand ermöglicht, eine Videobuchung mit mehr Aufmerksamkeit und Interaktivität auszustatten. Reichweite, Click- und Durchsehraten werden gesteigert.\n\nBackground: Ursprünglich wurde diese Werbeform bereits 2015/16 entwickelt und nutzte den Companion-Banner-Knoten des VAST-Protokolls für die Auslieferung des Codes. Zunächst wurde das Javascript für die Werbeform programmiert, anschließend im Adserver ein Buchungs-Template erstellt, das das Javascript zusammen mit hochzuladenen Grafiken nutzt und alles mit einer Videobuchung verknüpft.\n\nDurch das Wegfallen der Companion-Banner bei den meisten Publishern wurde später die beschriebene Lösung mit VPAID2 entwickelt. Parallel dazu entstand die 'PostMessage'-Erweiterung des Ströer-Video-Moduls, die u.a. für dieses Werbemittel benötigt wird. Es ist geplant, das Werbemittel auf den neuen VAST 4.1 Standard hin weiter zu entwickeln.\n\nDieses Projekt steht in Verbindung mit 'MetaTag Video – VPAID-PostMessage Integration' und 'AWS S3 Upload-Tool / Redirect Generator'.",
-    "images": ["brandedPlayer.png"],
-    "tech": ["JavaScript", "VAST", "VPAID", "Node.js", "GitHub", "Oath Ad Platform (AOL IQ)", "iBillboard Video Adserver"],
-    "platforms": ["web"],
+    "description": "VPAID2-Werbemittel, das zu einem Werbevideo passende Grafikelemente um den Videoplayer herum anzeigt. Werbetreibenden wird ohne zusätzlichen Agenturaufwand ermöglicht, eine Videobuchung mit mehr Aufmerksamkeit und Interaktivität auszustatten.\n\n## Hintergrund\nUrsprünglich 2015/16 entwickelt über den Companion-Banner-Knoten des VAST-Protokolls. Durch das Wegfallen der Companion-Banner bei den meisten Publishern wurde später die VPAID2-Lösung entwickelt.\n\n## Aufgaben\n- JavaScript für die Werbeform programmiert\n- Buchungs-Template im Adserver erstellt\n- 'PostMessage'-Erweiterung des Ströer-Video-Moduls als Kommunikationskanal\n- Geplant: Weiterentwicklung auf VAST 4.1\n\nSteht in Verbindung mit 'MetaTag Video – VPAID-PostMessage Integration' und 'AWS S3 Upload-Tool'.",
+    "images": [
+      "brandedPlayer.png"
+    ],
+    "tech": [
+      "JavaScript",
+      "VAST",
+      "VPAID",
+      "Node.js",
+      "GitHub",
+      "Oath Ad Platform (AOL IQ)",
+      "iBillboard Video Adserver"
+    ],
+    "platforms": [
+      "web"
+    ],
     "link": "#",
     "category": "Advertisement"
   },
   {
     "title": "Werbeform 'InText-Spot'",
-    "description": "Das Werbemittel blendet sich erst ein, sobald der User innerhalb des Textes nach unten scrollt. Zudem läuft der Spot nur bei einer Sichtbarkeit von mind. 50% ab. Optimal für die Verlängerung von PreRoll-Kampagnen geeignet.\n\nAufgaben: VAST/VPAID-kompatibler Videoplayer via JavaScript / Google IMA SDK HTML5. Programmierung in JS/CSS: Animation und Scrollverhalten (Öffnen bei 50% Sichtbarkeit, Anhalten wenn außerhalb View, Schließen nach Ablauf). Erstellen der Kreativ-Vorlagen in DFP, Ablage der Assets auf AWS S3, Integration auf einer Vielzahl von Publishern.\n\nVarianten: Desktop, Mobile (iOS & Android), 16/9 und 9/16 Auslieferung, RTA-Variante für Realtime Bidding Websites.",
+    "description": "Das Werbemittel blendet sich ein, sobald der User innerhalb des Textes nach unten scrollt. Läuft nur bei einer Sichtbarkeit von mind. 50%. Optimal für die Verlängerung von PreRoll-Kampagnen.\n\n## Aufgaben\n- VAST/VPAID-kompatibler Videoplayer via JavaScript / Google IMA SDK HTML5\n- Scrollverhalten: Öffnen bei 50% Sichtbarkeit, Anhalten wenn außerhalb View, Schließen nach Ablauf\n- Erstellen der Kreativ-Vorlagen in DFP, Ablage auf AWS S3\n- Integration auf einer Vielzahl von Publishern\n\n## Varianten\n- Desktop\n- Mobile (iOS & Android)\n- 16/9 und 9/16 Auslieferung\n- RTA-Variante für Realtime Bidding Websites",
     "images": [],
     "video": "/media/InText-Spot_display_Kicker.mp4",
-    "tech": ["JavaScript", "VAST", "VPAID", "Google IMA SDK", "HTML5", "CSS3", "DFP", "AWS S3", "iBillboard Video Adserver"],
-    "platforms": ["web"],
+    "tech": [
+      "JavaScript",
+      "VAST",
+      "VPAID",
+      "Google IMA SDK",
+      "HTML5",
+      "CSS3",
+      "DFP",
+      "AWS S3",
+      "iBillboard Video Adserver"
+    ],
+    "platforms": [
+      "web"
+    ],
     "link": "#",
     "category": "Advertisement"
   }

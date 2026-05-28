@@ -15,6 +15,43 @@ const isSlider = validImages.length > 1;
 
 // Unique ID for this card's modal
 const modalId = `modal-${Math.random().toString(36).slice(2, 8)}`;
+
+// Simple Markdown-like renderer for project descriptions
+// Supports: ## Heading, - list items, blank lines as paragraph breaks
+function renderDescription(text: string): string {
+  const blocks = text.split(/\n\n+/);
+  return blocks.map(block => {
+    const lines = block.split('\n');
+    // Heading
+    if (lines[0].startsWith('## ')) {
+      const heading = lines[0].replace('## ', '');
+      const rest = lines.slice(1);
+      const restHtml = rest.length ? renderDescription(rest.join('\n\n')) : '';
+      return `<h4 class="proj-heading">${heading}</h4>${restHtml}`;
+    }
+    // List
+    if (lines.every(l => l.startsWith('- ') || l.trim() === '')) {
+      const items = lines
+        .filter(l => l.startsWith('- '))
+        .map(l => `<li>${l.slice(2)}</li>`)
+        .join('');
+      return `<ul class="proj-list">${items}</ul>`;
+    }
+    // Mixed: some list items, some text
+    if (lines.some(l => l.startsWith('- '))) {
+      const html = lines.map(l =>
+        l.startsWith('- ') ? `<li>${l.slice(2)}</li>` : `<span>${l}</span>`
+      ).join('');
+      return `<ul class="proj-list">${html}</ul>`;
+    }
+    // Plain paragraph
+    return `<p class="proj-p">${lines.join('<br>')}</p>`;
+  }).join('');
+}
+
+const descriptionHtml = renderDescription(project.description);
+// Short preview: first paragraph only, plain text
+const descriptionPreview = project.description.split(/\n\n/)[0].replace(/^## /, '').replace(/^- /, '');
 ---
 
 <div class="project-card group relative bg-accent/5 border border-accent/10 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-500">
@@ -74,7 +111,7 @@ const modalId = `modal-${Math.random().toString(36).slice(2, 8)}`;
     </div>
 
     <p class="text-subtext text-sm font-body line-clamp-3">
-      {project.description}
+      {descriptionPreview}
     </p>
 
     <div class="flex flex-wrap gap-2 pt-2">
@@ -92,7 +129,8 @@ const modalId = `modal-${Math.random().toString(36).slice(2, 8)}`;
   id={modalId}
   class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
 >
-  <div class="relative bg-background border border-accent/20 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+  <div class="relative bg-background border border-accent/20 rounded-2xl max-w-3xl w-full flex flex-col shadow-2xl" style="max-height: 90vh;">
+
     <!-- Close button -->
     <button
       data-modal-close={modalId}
@@ -102,9 +140,9 @@ const modalId = `modal-${Math.random().toString(36).slice(2, 8)}`;
       <Icon name="mdi:close" class="w-6 h-6" />
     </button>
 
-    <!-- Video -->
+    <!-- Video (fixed, not scrollable) -->
     {project.video && (
-      <div class="aspect-video w-full bg-black rounded-t-2xl overflow-hidden">
+      <div class="aspect-video w-full bg-black rounded-t-2xl overflow-hidden shrink-0">
         <video
           src={project.video}
           controls
@@ -114,16 +152,14 @@ const modalId = `modal-${Math.random().toString(36).slice(2, 8)}`;
       </div>
     )}
 
-    <!-- Content -->
-    <div class="p-8 space-y-5">
+    <!-- Scrollable content -->
+    <div class="overflow-y-auto p-8 space-y-5">
       <div>
         <span class="text-accent text-[10px] uppercase tracking-widest font-bold">{project.category}</span>
         <h2 class="text-2xl font-heading font-bold text-maintext mt-1">{project.title}</h2>
       </div>
 
-      <p class="text-subtext text-sm font-body leading-relaxed">
-        {project.description}
-      </p>
+      <div class="proj-description text-subtext text-sm font-body leading-relaxed" set:html={descriptionHtml} />
 
       <div class="flex flex-wrap gap-2 pt-2 border-t border-accent/10">
         {project.tech.map((t: string) => (
@@ -206,6 +242,32 @@ const modalId = `modal-${Math.random().toString(36).slice(2, 8)}`;
 </script>
 
 <style is:global>
+  .proj-description .proj-heading {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin: 1rem 0 0.35rem;
+  }
+  .proj-description .proj-heading:first-child {
+    margin-top: 0;
+  }
+  .proj-description .proj-p {
+    margin: 0 0 0.6rem;
+  }
+  .proj-description .proj-p:last-child {
+    margin-bottom: 0;
+  }
+  .proj-description .proj-list {
+    margin: 0 0 0.6rem;
+    padding-left: 1.1rem;
+    list-style: disc;
+  }
+  .proj-description .proj-list li {
+    margin-bottom: 0.2rem;
+  }
+
   .project-card {
     opacity: 0;
     visibility: hidden;
