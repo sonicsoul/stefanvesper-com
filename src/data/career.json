@@ -16,7 +16,7 @@
     "skills": ["TypeScript", "React", "Storybook", "AlpineJS", "Tailwind CSS", "GitLab CI/CD", "Scrum", "Kanban"]
   },
   {
-    "company": "CI-Sounds & Media, Darmstadt",
+    "company": "CI-Sounds & Media, Darmstadt (zweite Phase)",
     "role": "Frontend-Entwickler (freiberuflich)",
     "period": "04/2016 – 02/2019",
     "type": "Freiberuflich",
@@ -30,6 +30,38 @@
     "type": "Vollzeit",
     "description": "Frontend-Entwicklung für digitale Werbe- und Video-Plattformen (HTML5, JavaScript). Aufbau von HTML5-Werbemitteln, Online-Video-Lösungen (VAST, VPAID, IMA SDK) und Multiscreen-Videoplayern. Cross-Browser- und Cross-Device-Optimierung, Performance-Tuning. 04/2016: Übernahme durch Ströer.",
     "skills": ["HTML5", "JavaScript", "VAST", "VPAID", "IMA SDK", "CSS3"]
+  },
+  {
+    "company": "CI-Sounds & Media, Darmstadt (erste Phase)",
+    "role": "Webdesign, Grafik, Multimedia, Audio",
+    "period": "2004-2008",
+    "type": "Vollzeit",
+    "description": "Freelancer im Bereich Webdesign und Audioproduktion",
+    "skills": ["Audiorecording", "Sprachaufnahmen", "Audiologos", "Corporate Sound", "Webdesign"]
+  },
+  {
+    "company": "Textildruck Steitz Weiterstadt",
+    "role": "Grafiker",
+    "period": "2003",
+    "type": "Vollzeit",
+    "description": "Grafiker in der Druckvorstufe",
+    "skills": ["Photoshop", "Illustrator", "InDesign", "Farbseparation", "Vektorisierung"]
+  },
+  {
+    "company": "KDL Darmstadt",
+    "role": "Flash-Entwickler und Grafiker",
+    "period": "2000-2002",
+    "type": "Vollzeit",
+    "description": "Flash-Entwickler der Online-Präsenz, Grafiker in der Druckvorstufe",
+    "skills": ["Actionscript2/3", "HTML", "Photoshop", "Illustrator", "InDesign"]
+  },
+  {
+    "company": "Hardware/Software Logemann",
+    "role": "Elektroniker im Prototypenbau",
+    "period": "1999",
+    "type": "Vollzeit",
+    "description": "Prototypenbau im Bereich Umweltmesstechnik",
+    "skills": ["SMD-Löten", "Leiterplattenbestückung", "Schaltpläne"]
   },
   {
     "company": "Heinrich-Emanuel-Merck-Schule, Darmstadt",
